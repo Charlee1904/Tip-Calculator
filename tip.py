@@ -6,11 +6,12 @@ total = bill_total + split
 
 bill_total_int = int(bill_total)
 tip_amount_int = int(tip_amount)
+split_int = int(split)
 
 tip = tip_amount_int / 100
 x = tip * bill_total_int
 total_with_tip = x + bill_total_int
+final_total = round(total_with_tip / split_int,2)
 
-print(total_with_tip) 
-
-print(f"Here is your total {total}")
+print(f"You should tip {x}")
+print(f"Here is your total {final_total}")
